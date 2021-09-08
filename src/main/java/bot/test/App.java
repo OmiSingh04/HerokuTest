@@ -30,5 +30,8 @@ public class App extends ListenerAdapter {
                         response.editMessageFormat("Pong: %d ms", System.currentTimeMillis() - time).queue();
                     });
         }
+        else if(event.getMessage().getContentRaw().startsWith("!hello")){
+            event.getChannel().sendMessage("Wassup Shorty!").queue();
+        }
     }
 }
