@@ -1,0 +1,1 @@
+worker: java src/main/java/bot/test/App.java
