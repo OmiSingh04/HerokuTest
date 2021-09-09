@@ -22,7 +22,7 @@ public class App extends ListenerAdapter {
     @Override
     public void onMessageReceived(MessageReceivedEvent event)
     {
-        if (event.getMessage().getContentRaw().startsWith("!ping"))
+        if (event.getMessage().getContentRaw().startsWith("?ping"))
         {
             long time = System.currentTimeMillis();
             event.getChannel().sendMessage("Pong!") /* => RestAction<Message> */
@@ -30,7 +30,7 @@ public class App extends ListenerAdapter {
                         response.editMessageFormat("Pong: %d ms", System.currentTimeMillis() - time).queue();
                     });
         }
-        else if(event.getMessage().getContentRaw().startsWith("!hello")){
+        else if(event.getMessage().getContentRaw().startsWith("?hello")){
             event.getChannel().sendMessage("Wassup Shorty!").queue();
         }
     }
