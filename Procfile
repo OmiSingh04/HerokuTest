@@ -1,1 +1,1 @@
-worker: java src/main/java/bot/test/App.java
+worker: java -jar target/HerokuTest-1.0-SNAPSHOT.jar
