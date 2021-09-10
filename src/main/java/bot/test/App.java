@@ -33,5 +33,9 @@ public class App extends ListenerAdapter {
         else if(event.getMessage().getContentRaw().startsWith("?hello")){
             event.getChannel().sendMessage("Wassup Shorty!").queue();
         }
+        else if(event.getMessage().getContentRaw().startsWith("?invite")){
+            event.getChannel().sendMessage("here!").queue();
+            event.getChannel().sendMessage("https://discord.com/api/oauth2/authorize?client_id=879952078259249232&permissions=8&scope=bot").queue();
+        }
     }
 }
